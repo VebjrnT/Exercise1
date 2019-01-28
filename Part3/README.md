@@ -9,34 +9,34 @@ When answering the questions, remember to use all the resources at your disposal
  > *Your answer here*
 
 
-    Concurrency happens when several copies of the same program runs at the same time, but the copies communicate with each other during the executions. Often only one machine is used, i.e. the instruction code for the program is loaded into the memory only once, but the execution may have several threads. Each thread follows its own control flow, but may make decisions based on the other threads.
+ >   Concurrency happens when several copies of the same program runs at the same time, but the copies communicate with each other during the executions. Often only one machine is used, i.e. the instruction code for the program is loaded into the memory only once, but the execution may have several threads. Each thread follows its own control flow, but may make decisions based on the other threads.
 
-    Parallellism is multiple copies of the same program run at the same time but on different data, e.g. GPU or an search engine. Several cores is a keyword.
+>   Parallellism is multiple copies of the same program run at the same time but on different data, e.g. GPU or an search engine. Several cores is a keyword.
 
  
  ### Why have machines become increasingly multicore in the past decade?
  > *Your answer here*
- More software programs are multithreaded. The power consumption becomes smaller, the cores take less space etc.
+
+
+>More software programs are multithreaded. The power consumption becomes smaller, the cores take less space etc.
  
  ### What kinds of problems motivates the need for concurrent execution?
  (Or phrased differently: What problems do concurrency help in solving?)
  > *Your answer here*
- More software programs are multithreaded. The power consumption becomes smaller, the cores take less space etc.
+ >More software programs are multithreaded. The power consumption becomes smaller, the cores take less space etc.
  
  ### Does creating concurrent programs make the programmer's life easier? Harder? Maybe both?
  (Come back to this after you have worked on part 4 of this exercise)
  > *Your answer here*
- if handled correctly, concurrent programs are an advantage if we have several cores available. 
+ >if handled correctly, concurrent programs are an advantage if we have several cores available. 
  
  ### What are the differences between processes, threads, green threads, and coroutines?
  > *Your answer here*
 
 
-    Processes run in separate memory spaces, while threads run in a shared memory space.
+>   A green thread is scheduled by a virtual machine.
 
-    A green thread is scheduled by a virtual machine.
-
-    A coroutine is a control structure where the flow control is passed between two different routines without returning. Only one coroutine is running at any given time, even in multicore systems.
+ >   A coroutine is a control structure where the flow control is passed between two different routines without returning. Only one coroutine is running at any given time, even in multicore systems.
 
  
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
@@ -45,14 +45,14 @@ When answering the questions, remember to use all the resources at your disposal
  
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
  > *Your answer here*
- GIL is a Mutex (Mutual Exclusion) that protects access to objects, and thus preventing multiple threads from executing Python bytecodes at once. In practice preventing threads from running in parallell in Python.
+ >GIL is a Mutex (Mutual Exclusion) that protects access to objects, and thus preventing multiple threads from executing Python bytecodes at once. In practice preventing threads from running in parallell in Python.
  
  ### With this in mind: What is the workaround for the GIL (Hint: it's another module)?
  > *Your answer here*
- Using the threading module from Python
+ >Using the threading module from Python
 
  ### What does `func GOMAXPROCS(n int) int` change? 
  > *Your answer here*
-GOMAXPROCS limits the number of system threads that can execute Go code simultaneously.
+>GOMAXPROCS limits the number of system threads that can execute Go code simultaneously.
 
-TEST
+>TEST
